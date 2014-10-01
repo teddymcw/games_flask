@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 from flask.ext.sqlalchemy import SQLAlchemy 
+from forms import InputForm
 
 app = Flask(__name__)
 db = SQLAlchemy(app)
@@ -47,7 +48,7 @@ def hello():
 @app.route("/play")
 def show_board():
     new_board = print_board()
-    return render_template("board.html", board_1=new_board[0], board_2=new_board[1], board_3=new_board[2])
+    return render_template("board.html", form=InputForm, board_1=new_board[0], board_2=new_board[1], board_3=new_board[2])
 
 
 if __name__ == "__main__":
