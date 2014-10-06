@@ -1,6 +1,7 @@
 from flask import Flask, render_template, flash
-from flask.ext.sqlalchemy import SQLAlchemy 
 from forms import InputForm
+from flask.ext.sqlalchemy import SQLAlchemy 
+
 from models import Game
 
 #for config
